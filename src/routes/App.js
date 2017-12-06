@@ -1,5 +1,5 @@
 import MainLayout from '../components/layout/MainLayout';
-import {itemsPath, formPath} from '../helpers/routes';
+import {itemsPath, addItemPath} from '../helpers/routes';
 import Main from '../components/Main';
 import Comments from '../components/Comments';
 import NewItem from '../components/NewItem';
@@ -15,7 +15,7 @@ const CommentsRoute = {
 };
 
 const NewItemRoute = {
-    path: formPath,
+    path: addItemPath,
     component: NewItem
 };
 

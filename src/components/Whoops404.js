@@ -2,7 +2,7 @@ import React from 'react';
 
 const Whoops404 = () => (
     <div>
-        Page not found: 404
+        Whoops, page not found: 404
     </div>
 );
 

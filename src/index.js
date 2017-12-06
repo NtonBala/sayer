@@ -8,7 +8,9 @@ import routes from './routes';
 const app = document.getElementById('app');
 
 ReactDOM.render(
-    //use history wrapper instead of hashHistory
-    <Router history={history} routes={routes}/>,
+    <Router
+        history={history} //use history wrapper instead of hashHistory
+        routes={routes}
+    />,
     app
 );
