@@ -6,7 +6,7 @@ const DeleteItemBtn = ({deleteItem}) => (
 );
 
 DeleteItemBtn.propTypes = {
-    deleteItem: PropTypes.func
+    deleteItem: PropTypes.func.isRequired
 };
 
 DeleteItemBtn.defaultProps = {

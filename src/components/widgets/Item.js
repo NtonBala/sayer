@@ -15,10 +15,10 @@ const Item = ({id, title, comments, deleteItem}) => (
 );
 
 Item.propTypes = {
-    id: ItemLink.propTypes.id.isRequired,
-    title: ItemLink.propTypes.title.isRequired,
-    comments: CommentsCounter.propTypes.counter.isRequired,
-    deleteItem: DeleteItemBtn.propTypes.deleteItem.isRequired
+    id: ItemLink.propTypes.id,
+    title: ItemLink.propTypes.title,
+    comments: CommentsCounter.propTypes.counter,
+    deleteItem: DeleteItemBtn.propTypes.deleteItem
 };
 
 Item.defaultProps = {

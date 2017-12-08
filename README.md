@@ -1,6 +1,6 @@
 # Sayer
 
-Sayer: the world's most used time waster client app - is Empeek test task that allows user to add/delete items &
+**Sayer**: the world's most used time waster client app - is **Empeek** test task that allows user to add/delete items &
 comment those items. Data is stored in browser's *Local Storage*, main technology used is a stack of *React Ecosystem*.
 
 ## Architecture
@@ -21,11 +21,10 @@ Data in *Local Storage* is kept as a string and has next shape:
         ]
     }
 ]
-```javascript
+```
 This shape has two nested entity types: items & comments.
 
-*Redux store* holds only *domain data* (*entities* field) and the data is kept in normalized form
-(for normalizing the data *normalzr* library is used):
+*Redux store* holds only *domain data* (*entities* field) and the data is kept in normalized form:
 ```javascript
 {
     entities: {
@@ -50,9 +49,9 @@ This shape has two nested entity types: items & comments.
         }
     }
 }
-```javascript
+```
 *App state* data and *UI state* data are cut down as for managing app and UI state *react-router*
-*location.pathname* is used.
+*location.pathname* is used. For normalizing the data *normalzr* library is used.
 
 ## Development Environment
 
