@@ -1,9 +1,9 @@
 import React from 'react';
-import AddItemForm from './widgets/elements/AddItemForm';
+import ItemForm from './widgets/ItemForm';
 
 const NewItem = () => (
     <div>
-        <AddItemForm/>
+        <ItemForm/>
     </div>
 );
 

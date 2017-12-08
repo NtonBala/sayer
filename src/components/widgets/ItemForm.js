@@ -1,50 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {bind} from 'lodash/function';
+import SubmitBtn from './elements/SubmitBtn';
 
-class AddItemForm extends React.Component {
+class ItemForm extends React.Component {
     constructor(props) {
         super(props);
         this.handleAddItem = bind(this.handleAddItem, this);
     }
     handleAddItem(e) {
         e.preventDefault();
-        const title = this.titleInput.trim();
+
+        const title = this.text.value.trim();
         if (title) {
             this.props.addItem(title);
         }
-        this.addItemForm.reset();
+        this.form.reset();
     }
     render() {
         return (
             <form
-                ref={(form) => {this.addItemForm = form;}}
+                ref={(form) => {this.form = form;}}
                 onSubmit={this.handleAddItem}
             >
                 <label htmlFor='titleInput'>Enter new item title:</label>
                 <input
                     id='titleInput'
-                    ref={(titleInput) => {this.titleInput = titleInput;}}
+                    ref={(text) => {this.text = text;}}
                     type='text'
                     placeholder='New item title...'
                 />
                 <label htmlFor='titleSubmit'>Submit new item title:</label>
-                <input
-                    id='titleSubmit'
-                    type='submit'
-                    value='>'
-                />
+                <SubmitBtn id='titleSubmit'/>
             </form>
         );
     }
 }
 
-AddItemForm.propTypes = {
+ItemForm.propTypes = {
     addItem: PropTypes.func.isRequired
 };
 
-AddItemForm.defaultProps = {
+ItemForm.defaultProps = {
     addItem: () => true
 };
 
-export default AddItemForm;
+export default ItemForm;
